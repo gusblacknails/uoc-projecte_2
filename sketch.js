@@ -7,20 +7,23 @@ function preload() {
 function setup() {
   createCanvas(1000, 1000);
   background(50);
-  image(img, 2, 2);
+  image(img, 0, 0);
 }
 function dilatacioImatge() {
-  if (tamanyOriginal) {
-    console.log("1");
-    image(img, 0, 0, 1500, 1500);
-    tamanyOriginal = false;
-  }
-  else {
-    console.log("2");
-    image(img, 2, 2);
+  // if (tamanyOriginal) {
+  //   console.log("1");
+  //   image(img, 0, 0, 1500, 1500);
+  //   tamanyOriginal = false;
+  // }
+  // else {
+  //   console.log("2");
+  //   image(img, 2, 2);
     
-    tamanyOriginal = true;
-  }  
+  //   tamanyOriginal = true;
+  // }  
+  img.filter(DILATE);
+  image(img, 0, 0);
+  
 }
 function posteritzacio() {
   img.filter(POSTERIZE, 3);
@@ -39,7 +42,9 @@ function resetejar() {
   img = loadImage("imatge_projecte_2.webp", () => {
     createCanvas(1000, 1000);
     background(50);
-    image(img, 2, 2);
+    image(img, 0, 0);
+     // pixelDensity(1) per no escalar la densitat de píxels a la densitat de píxels del monitor 
+    pixelDensity(1); 
   });
   
 }
