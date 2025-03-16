@@ -38,13 +38,13 @@ function negatiu() {
   image(img, 0, 0);
 }
 function resetejar() {
-  tamanyOriginal = true;
+  
   img = loadImage("imatge_projecte_2.webp", () => {
     createCanvas(1000, 1000);
     background(50);
     image(img, 0, 0);
      // pixelDensity(1) per no escalar la densitat de píxels a la densitat de píxels del monitor 
-    pixelDensity(1); 
+    // pixelDensity(1); 
   });
   
 }

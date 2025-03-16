@@ -1,1 +1,0 @@
-# uoc-projecte_2

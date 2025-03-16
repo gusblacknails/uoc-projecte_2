@@ -40,7 +40,7 @@ function setup() {
 
  // Creem una nova imatge 'buida' amb les mateixes dimensions que la imatge original 
  imgFilt = createImage(img.width, img.height);
- imgFilt2 = createImage(img.width, img.height);
+//  imgFilt2 = createImage(img.width, img.height);
 } 
 
 function draw() { 
@@ -50,7 +50,7 @@ function draw() {
 // Sempre hem de cridar loadPixels() abans d'accedir a l'array de píxels 
  img.loadPixels(); 
  imgFilt.loadPixels(); 
- imgFilt2.loadPixels();
+//  imgFilt2.loadPixels();
 
 // Recorrem tots els píxels de la imatge 
  for (let y=0; y<img.height; y++) { 
